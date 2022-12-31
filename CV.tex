@@ -1,0 +1,238 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+\usepackage{microtype}
+
+\hyphenation{Mersateb}
+
+\pretolerance=100
+\tolerance=10000
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{DarkBlue}{HTML}{00008b}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkBlue}
+\colorlet{headingrule}{DarkBlue}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{DarkBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\begin{document}
+\name{Atefeh Irani}
+\tagline{PhD Candidate in Artificial Intelligence at University of Tehran}
+\photoR{2.5cm}{profile}
+\personalinfo{%
+  \email{a.irani@ut.ac.ir}
+  \homepage{iamatefeh.ir}
+  \linkedin{irania}
+  \birthday{8 June 1993 (Age 29)}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+\columnratio{0.37}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{About Me}
+{\justifying \noindent Atefeh, Ph.D. candidate in Artificial Intelligence at the University of Tehran. My research focus is on cognitive science, with a particular interest in using AI to detect diseases. I have experience in detecting Autism and am currently working on early diagnosis of Parkinson's within the field of cognitive science. I am passionate about the intersection of AI and human cognition and strive to make a positive impact through my work. In addition to my research, I am also a game developer and have experience as a full-stack web developer. Always seeking new opportunities to learn and grow. \par}
+
+%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Education}
+\cvevent{PhD in Artificial intelligence and robotics}{University of Tehran}{2018 -- Present}{}
+GPA: 5/5
+
+\divider
+\cvevent{MSc in Artificial intelligence and robotics}{University of Tehran}{2015 -- 2018}{}
+{\justifying \noindent Thesis: A serious intelligent Game for rehabilitation andassessment of emotional skills in children suffering Autism Spectrum Disorder. \par}
+GPA: 4.4/5
+
+\divider
+\cvevent{Bsc in Software Engineering}{University of Tehran}{2011 -- 2015}{}
+GPA: 4.4/5
+
+\cvsection{Strengths}
+
+\cvtags{%
+	Software Architecture,
+	Artificial Intelligence,
+	Deep Learning,
+	Machine learning,
+	Big Data,
+	Pattern Recognition,
+	Image Processing,
+	Deep Learning,
+	Game Design
+}
+
+\vbox{ %
+	\cvsection{Languages}
+	
+	\cvskill{English}{4}
+	\cvskill{Persian}{5}
+}
+
+%%%%%%%%%% Referees %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vbox{ %
+%	\cvsection{Referees}
+%	
+%	\cvref{Fattah Haeri}{CEO at Mersateb Co.}{f.haeri@mersateb.com}
+%}
+
+%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{SKILLS}
+
+\vbox{ %
+	\cvsubsection{Machine Learning}
+	\cvskill{Python}{5}
+	\cvskill{Numpy}{5}
+	\cvskill{Tensorflow}{4}
+	\cvskill{Keras}{4}
+	\cvskill{OpenCV}{4}
+	\cvskill{MATLAB}{4}
+	\cvskill{Pytorch}{3}
+	\cvskill{R}{2}
+}
+
+
+\vbox{ %
+	\cvsubsection{Software Development}
+	\cvskill{C/C++/C\#}{5}
+	\cvskill{Python}{5}
+	\cvskill{Linq}{5}
+	\cvskill{Entitiy Framework}{4}
+	\cvskill{Unity}{4}
+	\cvskill{Java}{4}
+	\cvskill{Software Architectures}{4}
+	\cvskill{Android}{3}
+	
+}
+
+\vbox{ %
+	\cvsubsection{Databases}
+	\cvskill{SQL}{5}
+	\cvskill{PostgreSQL}{5}
+	\cvskill{MySQL}{4}
+	\cvskill{No-SQL}{2}
+}
+
+\vbox{ %
+	\cvsubsection{Web Development}
+	\cvskill{ASP.NET}{5}
+	\cvskill{Vuejs}{4}
+	\cvskill{JavaScript}{4}
+	\cvskill{Rest API}{4}
+	\cvskill{PHP}{2}
+}
+
+\vbox{ %
+	\cvsubsection{Other}
+	\cvskill{Git}{5}
+	\cvskill{FPGA}{3}
+	\cvskill{LabView}{3}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\switchcolumn
+
+
+%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+
+\vbox{ %
+	\cvevent{Lead Full Stack Developer}{Pars Cognition}{2015 -- Ongoing}{}
+	\begin{itemize}
+		\item Technical team management
+		\item Unity game designer and developer
+	\end{itemize}
+	\divider
+}
+
+\vbox{ %
+	\cvevent{Researcher}{University of Tehran \href{https://ut.ac.ir/en}{\faExternalLink*}}{Dec 2021 -- Ongoing}{}
+	Diagnosis Parkinson's disease using AI \par
+	\divider
+}
+
+\vbox{ %
+	\cvevent{Full Stack and Android Developer}{Mersateb Co. \href{https://mersateb.com}{\faExternalLink*}}{2014 -- 2018}{}
+	\begin{itemize}
+		\item Medical device software standard (62304) Implementor
+		\item Web developer
+	\end{itemize}
+	\divider
+}
+
+\vbox{ %
+	\cvevent{Teacher Assistant}{University of Tehran \href{https://ut.ac.ir/en}{\faExternalLink*}}{2014 -- 2015}{}
+	Courses: Artificial Intelligence, Operating Systems
+	\divider
+}
+
+\vbox{ %
+	\cvsection{Publications}
+	\cvpublication{Autism screening using a video	game based on emotions}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712053}
+	\cvpublication{A serious game to learn and enhance emotional skills for children: A pilot study}{2017 Proceedings of 1 st Digital Games Research Conference Trends, Technologies and Applications}{}
+	\cvpublication{Effectiveness of emogalaxy video game on social skills of children with adhd}{2019 International Serious Games Symposium (ISGS)}{https://www.doi.org/10.1109/ISGS49501.2019.9046992}
+	\cvpublication{Effectiveness of computer games of emotion regulation on social skills of children with intellectual disability}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712024}
+	\cvpublication{Effectiveness of emogalaxy video game on social skills of children with adhd}{2019 International Serious Games Symposium (ISGS)}{https://www.doi.org/10.1109/ISGS49501.2019.9046992}
+		
+}
+
+
+%%%%%%%%%% Honors & Awards %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vbox{ %
+	\cvsection{Honors \& Awards}
+	
+	\cvaward{National Elites Graduate Fellowship}{University of Tehran}{2018}
+	
+	\cvaward{Member of National Elites Foundation}{Iran National Elites Foundation}{2018 -- Present}
+	
+	\cvaward{Candidate of Serious Games Prize}{First Serious Games Prize (DGRC Conference)}{2017}
+
+	\cvaward{13th Place at the International Computer Engineering Olympiad}{19th international Computer Engineering Olympiad}{2014}
+
+	\cvaward{3rd Place at Iran Open International Robotic Competition}{ROV (Remotely operated underwater vehicle) League}{2017}
+	
+	\cvaward{Ranked second among all of the students (2012-2015)}{Computer Engineering, University of Tehran}{2012-2014}
+	
+	\cvaward{Ranked 213rd in National University EntranceExam}{Iran}{2011}
+	
+}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\nocite{*}
+
+
+\end{paracol}
+
+\end{document}
