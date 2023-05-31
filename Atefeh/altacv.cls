@@ -96,7 +96,7 @@
 \colorlet{body}{black!80!white}
 \colorlet{name}{heading}
 \colorlet{tagline}{accent}
-\newcommand{\itemmarker}{{\small\textbullet}}
+\newcommand{\itemmarker}{{--}}
 \newcommand{\ratingmarker}{\faCircle}
 
 \RequirePackage{tikz}
@@ -114,6 +114,8 @@
 
 \setlength{\parindent}{0pt}
 \newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+\newcommand{\hideText}[1]{\BeginAccSupp{method=escape,ActualText={}}#1\EndAccSupp{}}
+\newcommand{\link}[2]{\hideText{\href{#1}{#2}}}
 
 \newenvironment{fullwidth}{%
 	\begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
@@ -141,19 +143,12 @@
 %%       file, the icon name is pasted
 \ExplSyntaxOn
 \NewDocumentCommand{\printinfo}{m m o}{%
-	\BeginAccSupp{method=escape,ActualText={#1:~#2}}
 	\IfNoValueTF{#3}{%
-		\mbox{\textcolor{accent}{\normalfont #1}~\utffriendlydetokenize{#2}\hspace{2em}}%
+		\mbox{\hideText{\textcolor{accent}{\normalfont #1}}~\utffriendlydetokenize{#2}\hspace{2em}}%
 	}{%
-		\if@withhyper%
-		\mbox{\textcolor{accent}{\normalfont #1}~
+		\mbox{\hideText{\textcolor{accent}{\normalfont #1}}~
 			\href{#3}{\utffriendlydetokenize{#2}}\hspace{2em}}
-		\else%
-		\ClassWarning{Please specify [withhyper] option to enable hyperlinks. Printing out full hyperlink prefix #1 for now.}%
-		\mbox{\textcolor{accent}{\normalfont #1}~{\utffriendlydetokenize{#3#2}}\hspace{2em}}%
-		\fi%
 	}%
-	\EndAccSupp{}
 }%
 
 
@@ -191,12 +186,12 @@
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
-\NewInfoField{email}{\faAt}[mailto:]
+\NewInfoField{email}{\faAt}
 \NewInfoField{mailaddress}{\faEnvelope}
-\NewInfoField{phone}{\faPhone}[tel:]
-\NewInfoField{homepage}{\faGlobe}[https://]
+\NewInfoField{phone}{\faPhone}
+\NewInfoField{homepage}{\faGlobe}[]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
+\NewInfoField{linkedin}{\faLinkedin}[]
 \NewInfoField{github}{\faGithub}[https://github.com/]
 \NewInfoField{birthday}{\faBirthdayCake}
 % v1.?? Use fontawesome5 for Orcid symbol
@@ -281,22 +276,25 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-	{\large\color{emphasis}#1\par}
+	{\large\color{emphasis}#1
+		\hfill
+		\ifstrequal{#4}{}{}{{\small\hideText{\faMapMarker}~#4}}
+		\ifstrequal{#3}{}{}{{\small\hideText{\faCalendar}~#3}}
+		\par
+	}
 	\smallskip\normalsize
 	\ifstrequal{#2}{}{}{
 		\textbf{\color{accent}#2}\par
 		\smallskip}
-	\ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
-	\ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
 	\medskip\normalsize
 }
 
 \newcommand{\cvproject}[3]{%
 	{\large\color{emphasis}#1 %
 		\ifstrequal{#2}{}{}{
-			\href{#2}{\faExternalLink*}
+			\link{#2}{\faExternalLink*}
 		} \hfill %
-		\ifstrequal{#3}{}{}{{\small\faCalendar~#3}} \par}
+		\ifstrequal{#3}{}{}{{\small\hideText{\faCalendar}~#3}} \par}
 	\medskip\normalsize
 }
 
@@ -313,7 +311,7 @@
 		{\large\color{emphasis}#1}\par
 		\emph{#2}
 		\ifstrequal{#3}{}{}{{\href{#3}{\faExternalLink*}}}
-	\par}
+		\par}
 	\medskip\normalsize
 }
 
@@ -360,14 +358,9 @@
 % v1.6: Use accsupp so that the actual numeric value is copied/pasted
 %       and also support 0.5, 1.5, 2.5, 3.5, 4.5
 \newcommand{\cvskill}[2]{%
-	\textcolor{emphasis}{\textbf{#1}}\hfill
-	\BeginAccSupp{method=plain,ActualText={#2}}
-	\foreach \x in {1,...,5}{%
-		\ifdimequal{\x pt - #2 pt}{0.5pt}%
-		{\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{accent}\ratingmarker}%
-			\clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{body!30}\ratingmarker}}
-		{\ifdimgreater{\x bp}{#2 bp}{\color{body!30}}{\color{accent}}\ratingmarker}%
-	}\EndAccSupp{}\par%
+	\textcolor{emphasis}{\textbf{#1:}}
+	#2 \par
+	\medskip
 }
 
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226

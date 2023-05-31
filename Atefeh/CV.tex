@@ -28,7 +28,7 @@
 \definecolor{VividPurple}{HTML}{3E0097}
 \definecolor{DarkBlue}{HTML}{00008b}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightGrey}{HTML}{3B3B3B}
 % \colorlet{name}{black}
 % \colorlet{tagline}{PastelRed}
 \colorlet{heading}{DarkBlue}
@@ -40,211 +40,252 @@
 
 \begin{document}
 \name{Atefeh Irani}
-\tagline{PhD Candidate in Artificial Intelligence at University of Tehran}
+\tagline{Ph.D. Candidate in Artificial Intelligence at University of Tehran }
 \photoR{2.5cm}{profile}
 \personalinfo{%
   \email{a.irani@ut.ac.ir}
-  \homepage{iamatefeh.ir}
-  \linkedin{irania}
-  \birthday{8 June 1993 (Age 29)}
+  %\homepage{https://iamatefeh.ir}
+  \phone{+98-9128518550}
+  \linkedin{https://linkedin.com/in/irania}
+  \birthday{1993 (29 years old)}
+  \location{Tehran, Iran}
+
 }
 
 \makecvheader
 
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+%% Depending on your tastes, you may want to make fonts of e environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
 
-\columnratio{0.37}
+\columnratio{0.5}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
-\begin{paracol}{2}
 
 \cvsection{About Me}
-{\justifying \noindent Atefeh, Ph.D. candidate in Artificial Intelligence at the University of Tehran. My research focus is on cognitive science, with a particular interest in using AI to detect diseases. I have experience in detecting Autism and am currently working on early diagnosis of Parkinson's within the field of cognitive science. I am passionate about the intersection of AI and human cognition and strive to make a positive impact through my work. In addition to my research, I am also a game developer and have experience as a full-stack web developer. Always seeking new opportunities to learn and grow. \par}
+{\justifying \noindent AI Ph.D. Candidate with more than 8 years of experience in machine learning and advanced programming. Focuses on cognitive science, and neuroscience in relation to  disease detection, and rehabilitation. Experienced at developing web applications and video games for diverse domains, including education and healthcare. \par}
+\medskip
 
 %%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cvsection{Education}
-\cvevent{PhD in Artificial intelligence and robotics}{University of Tehran}{2018 -- Present}{}
-GPA: 5/5
-
-\divider
-\cvevent{MSc in Artificial intelligence and robotics}{University of Tehran}{2015 -- 2018}{}
-{\justifying \noindent Thesis: A serious intelligent Game for rehabilitation andassessment of emotional skills in children suffering Autism Spectrum Disorder. \par}
-GPA: 4.4/5
-
-\divider
-\cvevent{Bsc in Software Engineering}{University of Tehran}{2011 -- 2015}{}
-GPA: 4.4/5
-
-\cvsection{Strengths}
-
-\cvtags{%
-	Software Architecture,
-	Artificial Intelligence,
-	Deep Learning,
-	Machine learning,
-	Big Data,
-	Pattern Recognition,
-	Image Processing,
-	Deep Learning,
-	Game Design
-}
-
 \vbox{ %
-	\cvsection{Languages}
+	\cvsection{Education}
+	\cvevent{Ph.D. in Artificial Intelligence and Robotics}{University of Tehran}{2018 -- present}{}
+	Thesis: Parkinson's Disease Detection Using Facial and Vocal Features
+	\medskip
+	\begin{itemize}
+		\item Grade: 19.83/20
+		\item National Elites Graduate Fellowship
+	\end{itemize}
 	
-	\cvskill{English}{4}
-	\cvskill{Persian}{5}
-}
-
-%%%%%%%%%% Referees %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\vbox{ %
-%	\cvsection{Referees}
-%	
-%	\cvref{Fattah Haeri}{CEO at Mersateb Co.}{f.haeri@mersateb.com}
-%}
-
-%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{SKILLS}
-
-\vbox{ %
-	\cvsubsection{Machine Learning}
-	\cvskill{Python}{5}
-	\cvskill{Numpy}{5}
-	\cvskill{Tensorflow}{4}
-	\cvskill{Keras}{4}
-	\cvskill{OpenCV}{4}
-	\cvskill{MATLAB}{4}
-	\cvskill{Pytorch}{3}
-	\cvskill{R}{2}
-}
-
-
-\vbox{ %
-	\cvsubsection{Software Development}
-	\cvskill{C/C++/C\#}{5}
-	\cvskill{Python}{5}
-	\cvskill{Linq}{5}
-	\cvskill{Entitiy Framework}{4}
-	\cvskill{Unity}{4}
-	\cvskill{Java}{4}
-	\cvskill{Software Architectures}{4}
-	\cvskill{Android}{3}
+	\divider
 	
+	\cvevent{MSc in Artificial Intelligence and Robotics}{University of Tehran}{2015 -- 2018}{}
+	Thesis: A Serious intelligent Game for Rehabilitation and Assessment of Emotional
+	Skills in Children Suffering from Autism Spectrum Disorder.
+	\medskip
+	\begin{itemize}
+		\item Grade: 17.73/20
+	\end{itemize}
+	\divider
+	
+	\cvevent{BSc \ in Computer Engineering}{University of Tehran}{2011 -- 2015}{}
+	Major: Software \par
+	Thesis: Create an Application for recording infant sounds for screening Autism Spectrum Disorder.
+	\medskip
+	\begin{itemize}
+		\item Grade: 17.77/20
+		\item 2nd rank among all of the students
+		\item 3rd place at Iran Open International Robotic Competition
+		\item 13th place at the national Computer Engineering Olympiad
+	\end{itemize}
+	\divider
 }
-
+%%%%%%%%%% PUBLICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vbox{ %
-	\cvsubsection{Databases}
-	\cvskill{SQL}{5}
-	\cvskill{PostgreSQL}{5}
-	\cvskill{MySQL}{4}
-	\cvskill{No-SQL}{2}
+	\cvsection{Publications}
+	\cvpublication{Effectiveness of Emogalaxy video game on social skills of children with ADHD}{2019 International Serious Games Symposium (ISGS)}{https://www.doi.org/10.1109/ISGS49501.2019.9046992}
+	\cvpublication{Effectiveness of EmoGalaxy video game on social skills of children with oppositional defiant disorder}{2019 International Serious Games Symposium (ISGS)}{https://ieeexplore.ieee.org/abstract/document/9047022/}
+	\cvpublication{Autism screening using a video	game based on emotions}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712053}
+	\cvpublication{Effectiveness of computer games of emotion regulation on social skills of children with intellectual disability}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712024}
+	\cvpublication{A serious game to learn and enhance emotional skills for children: A pilot study}{2017 Proceedings of 1st Digital Games Research Conference Trends, Technologies and Applications}{}
+	\divider
 }
 
-\vbox{ %
-	\cvsubsection{Web Development}
-	\cvskill{ASP.NET}{5}
-	\cvskill{Vuejs}{4}
-	\cvskill{JavaScript}{4}
-	\cvskill{Rest API}{4}
-	\cvskill{PHP}{2}
-}
-
-\vbox{ %
-	\cvsubsection{Other}
-	\cvskill{Git}{5}
-	\cvskill{FPGA}{3}
-	\cvskill{LabView}{3}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\switchcolumn
 
 
 %%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cvsection{Experience}
 
+
 \vbox{ %
 	\cvevent
-	{Pars Cognition}
+	{Pars Cognition. \link{http://parscognition.ir/}{\faExternalLink*}}
 	{Lead Full Stack Developer}
-	{2015 -- Ongoing}{}
+	{2015 -- 2022}{Tehran, Iran}
 	\begin{itemize}
-		\item Technical team management
-		\item Unity game designer and developer
-	\end{itemize}
+		\item Led a team of 7+ developers in the development of web applications built with Asp.Net and Vue.js.
+		\item Developed and created 10+ video games using Unity for cognitive rehabilitation purposes.
+		\item Designed the backend architecture, created APIs, and oversaw front-end development and UI/UX design.
+		\item Provided mentorship to junior developers to enhance the skills and knowledge of the team.
+	\end{itemize}	
 	\divider
 }
 
 \vbox{ %
 	\cvevent
-	{University of Tehran \href{https://ut.ac.ir/en}{\faExternalLink*}}
-	{Researcher}
-	{Dec 2021 -- Ongoing}{}
-	Diagnosis Parkinson's disease using AI \par
-	\divider
-}
-
-\vbox{ %
-	\cvevent
-	{Mersateb Co. \href{https://mersateb.com}{\faExternalLink*}}
-	{Full Stack and Android Developer}
-	{2014 -- 2018}{}
-	\begin{itemize}
-		\item Medical device software standard (62304) Implementor
-		\item Web developer
-	\end{itemize}
-	\divider
-}
-
-\vbox{ %
-	\cvevent
-	{University of Tehran \href{https://ut.ac.ir/en}{\faExternalLink*}}
+	{The University of Tehran \link{https://ut.ac.ir/en}{\faExternalLink*}}
 	{Teacher Assistant}
-	{2014 -- 2015}{}
-	Courses: Artificial Intelligence, Operating Systems
+	{2014}{}
+	Courses:
+	\smallskip
+	\begin{itemize}
+		\item Artificial Intelligence
+		\item Operating Systems
+	\end{itemize}
 	\divider
 }
+\vbox{ %
+	\cvevent
+	{Mersateb Co. \link{https://mersateb.com/en}{\faExternalLink*}}
+	{Full Stack and Android Developer}
+	{2014 - 2018}{Tehran, Iran}
+	\begin{itemize}
+		\item Coded 3 software for medical devices interface for Android system using Java and android studio.
+		\item Created 4+ Windows applications for warehousing, accounting, quality control, and customer management.
+		\item Implemented Medical Device Software Standard (62304).
+		\item Recompiled Android OS for compatibility and reduce start time to under 10 seconds.
+	\end{itemize}
+	\divider
+}
+%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \vbox{ %
-	\cvsection{Publications}
-	\cvpublication{Autism screening using a video	game based on emotions}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712053}
-	\cvpublication{A serious game to learn and enhance emotional skills for children: A pilot study}{2017 Proceedings of 1 st Digital Games Research Conference Trends, Technologies and Applications}{}
-	\cvpublication{Effectiveness of emogalaxy video game on social skills of children with adhd}{2019 International Serious Games Symposium (ISGS)}{https://www.doi.org/10.1109/ISGS49501.2019.9046992}
-	\cvpublication{Effectiveness of computer games of emotion regulation on social skills of children with intellectual disability}{2018 2nd National and 1st International Digital Games Research Conference: Trends, Technologies, and Applications (DGRC)}{https://www.doi.org/10.1109/DGRC.2018.8712024}
-	\cvpublication{Effectiveness of emogalaxy video game on social skills of children with adhd}{2019 International Serious Games Symposium (ISGS)}{https://www.doi.org/10.1109/ISGS49501.2019.9046992}
-		
+	\cvsection{Projects}
+	\cvproject{Mahsa}{https://educational.cognitivetests.ir}{2020}
+	\justifying \noindent
+	A web-based assessment evaluates preschool children's educational skills.
+	\medskip
+	\begin{itemize}
+		\item Supervised a team of +7 professionals in the development of a web application using Asp.Net and Python.
+		\item Managed a team of developers to create 8+ cognitive tests for educational skill assessment, and integrated them with an AI system for voice processing.
+		\item Collaborated with psychology professionals to ensure the accuracy of tests.
+	\end{itemize}
 }
-
-
-%%%%%%%%%% Honors & Awards %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\divider
 
 \vbox{ %
-	\cvsection{Honors \& Awards}
-	
-	\cvaward{National Elites Graduate Fellowship}{University of Tehran}{2018}
-	
-	\cvaward{Member of National Elites Foundation}{Iran National Elites Foundation}{2018 -- Present}
-	
-	\cvaward{Candidate of Serious Games Prize}{First Serious Games Prize (DGRC Conference)}{2017}
+	\cvproject{Maghzineh}{https://clinic.maghzineh.com}{2019}
+	\justifying \noindent
+	An online platform to aid in cognitive assessment and rehabilitation using games and tests, making it easy for clinics to track patients' progress.
+	\medskip
+	\begin{itemize}
+		\item Created using Asp.Net Core, Vue.js, SQL Server, and Unity games.
+		\item Accommodated up to 4000+ concurrent users and incorporated scalability solutions for optimal performance and stability.
+		\item Activated in 10+ clinics and schools.
+		\item Implemented user reports with stored records in the database for 8 cognitive components.
+	\end{itemize}	
+}
+\divider
 
-	\cvaward{13th Place at the International Computer Engineering Olympiad}{19th international Computer Engineering Olympiad}{2014}
+\vbox{ %
+	\cvproject{Attention Games}{https://www.maghzineh.com}{2019}
+	\justifying \noindent
+		A set of video games to enhance brain abilities, such as sustained attention, selective attention, divided attention, and memory.
+	\medskip
+	\begin{itemize}
+		\item Designed and Developed more than 10+ games for multiple platforms, including Android, web, and Windows.
+		\item Managed a team of 4 junior developers and designers from conception to completion.
+		\item Analyzed 100000+ games' responses to improve game levels
+	\end{itemize}
+}
 
-	\cvaward{3rd Place at Iran Open International Robotic Competition}{ROV (Remotely operated underwater vehicle) League}{2017}
-	
-	\cvaward{Ranked second among all of the students (2012-2015)}{Computer Engineering, University of Tehran}{2012-2014}
-	
-	\cvaward{Ranked 213rd in National University EntranceExam}{Iran}{2011}
+\divider
+
+\vbox{ %
+	\cvproject{EmoGalaxy}{https://direc.ircg.ir/}{2017}
+	\justifying \noindent
+	An interactive game for children, aiding in screening and improving emotional difficulties by considering emotional recognition, expression, and regulation.
+	\medskip
+	\begin{itemize}
+			\item Build a game focused on six core emotions using Unity.
+		\item Candidate for serious game prize award.
+		\item Test on more than 200+ children with Normal children and children with disorders such as autism and ADHD.
+		\item Classified Children as Normal and those with ASD based on game data with 93\%+ accuracy.
+	\end{itemize}
 	
 }
+
+\divider
+
+
+
+
+
+
+
+%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vbox{ %
+	
+	\cvsection{SKILLS}
+	
+	\cvskill{Machine Learning}{
+		Python,
+		Numpy,
+		Tensorflow,
+		Keras,
+		OpenCV,
+		Sikit,
+		Pandas,
+		Matlab,
+		R
+	}
+	
+	
+	\cvskill{Software Development}{
+		C, C++, C\#,
+		Linq,
+		Entity Framework,
+		Unity,
+		Java,
+		Software Architectures,
+		Android
+	}
+	
+	\cvskill{Databases}{
+		SQL,
+		PostgreSQL,
+		MySQL,
+		NoSQL
+	}
+	
+	
+	\cvskill{Web Development}{
+		ASP.NET,
+		Javascript,
+		Vuejs,
+		Rest API,
+		PHP
+	}
+	
+	\cvskill{Other}{
+		Git,
+		FPGA,
+		LabView
+	}
+	
+	\cvskill{Project Management \& Analysis}{
+		Agile (Scrum),
+		Kanban
+	}
+	
+	\cvskill{Languages}{
+		English, Persian
+	}
+}
+
 
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
 \nocite{*}
-
-
-\end{paracol}
 
 \end{document}
